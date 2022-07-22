@@ -37,9 +37,9 @@ class _ChangePageState extends State<AddCustomers> {
   final pMobileController = TextEditingController();
   final pEmailController = TextEditingController();
   final pPhoneController = TextEditingController();
-  var aMobileController = TextEditingController();
-  var aEmailController = TextEditingController();
-  var aPhoneController = TextEditingController();
+  // var aMobileController = TextEditingController();
+  // var aEmailController = TextEditingController();
+  // var aPhoneController = TextEditingController();
   bool _loading = false;
   final _formKey = GlobalKey<FormState>();
   bool _autoValidate = false;
@@ -1090,233 +1090,233 @@ class _ChangePageState extends State<AddCustomers> {
                     filled: true)),
           ),
           const SizedBox(height: 15.0),
-          InkWell(
-            onTap: () {
-              setState(() {
-                String value1 = "";
-                String value2 = "";
-                String value3 = "";
+          // InkWell(
+          //   onTap: () {
+          //     setState(() {
+          //       String value1 = "";
+          //       String value2 = "";
+          //       String value3 = "";
 
-                value1 = pPhoneController.text;
-                value2 = pEmailController.text;
-                value3 = pMobileController.text;
+          //       value1 = pPhoneController.text;
+          //       value2 = pEmailController.text;
+          //       value3 = pMobileController.text;
 
-                aPhoneController = TextEditingController(text: value1);
-                aEmailController = TextEditingController(text: value2);
-                aMobileController = TextEditingController(text: value3);
-              });
-            },
-            child: Align(
-              alignment: Alignment.topRight,
-              child: Container(
-                margin: const EdgeInsets.only(right: 8.0, left: 8),
-                child: Text("Copy primary values",
-                    softWrap: true,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: normalTex2),
-              ),
-            ),
-          ),
-          const SizedBox(height: 10.0),
-          Container(
-            margin: const EdgeInsets.only(right: 8.0, left: 8),
-            child: TextFormField(
-                controller: aEmailController,
-                keyboardType: TextInputType.text,
-                cursorColor: Color(0xff000000),
-                textCapitalization: TextCapitalization.sentences,
-                onSaved: (String value) {
-                  aEmailController.text = value;
-                },
-                decoration: InputDecoration(
-                    isDense: true,
-                    contentPadding: EdgeInsets.fromLTRB(15, 30, 30, 0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    disabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    counterText: "",
-                    hintText: 'Accounts Email',
-                    hintStyle:
-                        TextStyle(color: Color(0xffcdcbcb), fontSize: 16),
-                    fillColor: Color(0xffffffff),
-                    filled: true)),
-          ),
-          const SizedBox(height: 15.0),
-          Container(
-            margin: const EdgeInsets.only(right: 8.0, left: 8),
-            child: TextFormField(
-                controller: aMobileController,
-                //  maxLength: 10,
-                keyboardType: TextInputType.text,
-                cursorColor: Color(0xff000000),
-                textCapitalization: TextCapitalization.sentences,
-                onSaved: (String value) {
-                  aMobileController.text = value;
-                },
-                /* validator: (value) {
-                    if (value.length < 10) {
-                      return 'Please enter 10 digit mobile number';
-                    } else if (value.length > 10) {
-                      return 'Please enter 10 digit mobile number';
-                    }
-                    return null;
-                  },*/
-                decoration: InputDecoration(
-                    isDense: true,
-                    contentPadding: EdgeInsets.fromLTRB(15, 30, 30, 0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    disabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    counterText: "",
-                    hintText: 'Accounts Contact',
-                    hintStyle:
-                        TextStyle(color: Color(0xffcdcbcb), fontSize: 16),
-                    fillColor: Color(0xffffffff),
-                    filled: true)),
-          ),
-          const SizedBox(height: 15.0),
-          Container(
-            margin: const EdgeInsets.only(right: 8.0, left: 8),
-            child: TextFormField(
-                controller: aPhoneController,
-                keyboardType: TextInputType.text,
-                cursorColor: Color(0xff000000),
-                textCapitalization: TextCapitalization.sentences,
-                onSaved: (String value) {
-                  aPhoneController.text = value;
-                },
-                decoration: InputDecoration(
-                    isDense: true,
-                    contentPadding: EdgeInsets.fromLTRB(15, 30, 30, 0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    disabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: BorderSide(
-                        color: Color(0xffcdcbcb),
-                      ),
-                    ),
-                    counterText: "",
-                    hintText: 'Accounts Phone',
-                    hintStyle:
-                        TextStyle(color: Color(0xffcdcbcb), fontSize: 16),
-                    fillColor: Color(0xffffffff),
-                    filled: true)),
-          ),
-          const SizedBox(height: 15.0),
-          Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(25.0),
-                border: Border.all(
-                  color: Color(0xffcdcbcb),
-                )),
-            margin: const EdgeInsets.only(right: 8.0, left: 8),
-            child: DropdownButtonHideUnderline(
-              child: Padding(
-                padding: EdgeInsets.only(right: 0, left: 0),
-                child: new DropdownButton<String>(
-                  isExpanded: true,
-                  hint: new Text(
-                    "Select Zone ",
-                    style: TextStyle(color: Color(0xffcdcbcb), fontSize: 16),
-                  ),
-                  icon: Padding(
-                    padding: const EdgeInsets.only(left: 0),
-                    child: Icon(
-                      Icons.keyboard_arrow_down,
-                      color: Colors.black,
-                    ),
-                  ),
-                  value: selectedCity,
-                  isDense: true,
-                  autofocus: true,
-                  onChanged: (String newValue) {
-                    setState(() {
-                      FocusScope.of(context).requestFocus(new FocusNode());
-                      selectedCity = newValue;
-                      List<String> item = _city.map((City map) {
-                        for (int i = 0; i < _city.length; i++) {
-                          if (selectedCity == map.FOURTH_LEVEL_NAME) {
-                            _type1 = map.FOURTH_LEVEL_ID;
-                            return map.FOURTH_LEVEL_ID;
-                          }
-                        }
-                      }).toList();
-                    });
-                  },
-                  items: _city.map((City map) {
-                    return new DropdownMenuItem<String>(
-                      value: map.FOURTH_LEVEL_NAME,
-                      child: new Text(map.FOURTH_LEVEL_NAME,
-                          style: new TextStyle(
-                              color: Color(0xff000000), fontSize: 16)),
-                    );
-                  }).toList(),
-                ),
-              ),
-            ),
-          ),
+          //       aPhoneController = TextEditingController(text: value1);
+          //       aEmailController = TextEditingController(text: value2);
+          //       aMobileController = TextEditingController(text: value3);
+          //     });
+          //   },
+          //   child: Align(
+          //     alignment: Alignment.topRight,
+          //     child: Container(
+          //       margin: const EdgeInsets.only(right: 8.0, left: 8),
+          //       child: Text("Copy primary values",
+          //           softWrap: true,
+          //           maxLines: 1,
+          //           overflow: TextOverflow.ellipsis,
+          //           style: normalTex2),
+          //     ),
+          //   ),
+          // ),
+          // const SizedBox(height: 10.0),
+          // Container(
+          //   margin: const EdgeInsets.only(right: 8.0, left: 8),
+          //   child: TextFormField(
+          //       controller: aEmailController,
+          //       keyboardType: TextInputType.text,
+          //       cursorColor: Color(0xff000000),
+          //       textCapitalization: TextCapitalization.sentences,
+          //       onSaved: (String value) {
+          //         aEmailController.text = value;
+          //       },
+          //       decoration: InputDecoration(
+          //           isDense: true,
+          //           contentPadding: EdgeInsets.fromLTRB(15, 30, 30, 0),
+          //           border: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           enabledBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           disabledBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           focusedBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           counterText: "",
+          //           hintText: 'Accounts Email',
+          //           hintStyle:
+          //               TextStyle(color: Color(0xffcdcbcb), fontSize: 16),
+          //           fillColor: Color(0xffffffff),
+          //           filled: true)),
+          // ),
+          // const SizedBox(height: 15.0),
+          // Container(
+          //   margin: const EdgeInsets.only(right: 8.0, left: 8),
+          //   child: TextFormField(
+          //       controller: aMobileController,
+          //       //  maxLength: 10,
+          //       keyboardType: TextInputType.text,
+          //       cursorColor: Color(0xff000000),
+          //       textCapitalization: TextCapitalization.sentences,
+          //       onSaved: (String value) {
+          //         aMobileController.text = value;
+          //       },
+          //       /* validator: (value) {
+          //           if (value.length < 10) {
+          //             return 'Please enter 10 digit mobile number';
+          //           } else if (value.length > 10) {
+          //             return 'Please enter 10 digit mobile number';
+          //           }
+          //           return null;
+          //         },*/
+          //       decoration: InputDecoration(
+          //           isDense: true,
+          //           contentPadding: EdgeInsets.fromLTRB(15, 30, 30, 0),
+          //           border: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           enabledBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           disabledBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           focusedBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           counterText: "",
+          //           hintText: 'Accounts Contact',
+          //           hintStyle:
+          //               TextStyle(color: Color(0xffcdcbcb), fontSize: 16),
+          //           fillColor: Color(0xffffffff),
+          //           filled: true)),
+          // ),
+          // const SizedBox(height: 15.0),
+          // Container(
+          //   margin: const EdgeInsets.only(right: 8.0, left: 8),
+          //   child: TextFormField(
+          //       controller: aPhoneController,
+          //       keyboardType: TextInputType.text,
+          //       cursorColor: Color(0xff000000),
+          //       textCapitalization: TextCapitalization.sentences,
+          //       onSaved: (String value) {
+          //         aPhoneController.text = value;
+          //       },
+          //       decoration: InputDecoration(
+          //           isDense: true,
+          //           contentPadding: EdgeInsets.fromLTRB(15, 30, 30, 0),
+          //           border: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           enabledBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           disabledBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           focusedBorder: OutlineInputBorder(
+          //             borderRadius: BorderRadius.circular(25.0),
+          //             borderSide: BorderSide(
+          //               color: Color(0xffcdcbcb),
+          //             ),
+          //           ),
+          //           counterText: "",
+          //           hintText: 'Accounts Phone',
+          //           hintStyle:
+          //               TextStyle(color: Color(0xffcdcbcb), fontSize: 16),
+          //           fillColor: Color(0xffffffff),
+          //           filled: true)),
+          // ),
+          // const SizedBox(height: 15.0),
+          // Container(
+          //   padding: EdgeInsets.all(10),
+          //   decoration: BoxDecoration(
+          //       color: Colors.white,
+          //       borderRadius: BorderRadius.circular(25.0),
+          //       border: Border.all(
+          //         color: Color(0xffcdcbcb),
+          //       )),
+          //   margin: const EdgeInsets.only(right: 8.0, left: 8),
+          //   child: DropdownButtonHideUnderline(
+          //     child: Padding(
+          //       padding: EdgeInsets.only(right: 0, left: 0),
+          //       child: new DropdownButton<String>(
+          //         isExpanded: true,
+          //         hint: new Text(
+          //           "Select Zone ",
+          //           style: TextStyle(color: Color(0xffcdcbcb), fontSize: 16),
+          //         ),
+          //         icon: Padding(
+          //           padding: const EdgeInsets.only(left: 0),
+          //           child: Icon(
+          //             Icons.keyboard_arrow_down,
+          //             color: Colors.black,
+          //           ),
+          //         ),
+          //         value: selectedCity,
+          //         isDense: true,
+          //         autofocus: true,
+          //         onChanged: (String newValue) {
+          //           setState(() {
+          //             FocusScope.of(context).requestFocus(new FocusNode());
+          //             selectedCity = newValue;
+          //             List<String> item = _city.map((City map) {
+          //               for (int i = 0; i < _city.length; i++) {
+          //                 if (selectedCity == map.FOURTH_LEVEL_NAME) {
+          //                   _type1 = map.FOURTH_LEVEL_ID;
+          //                   return map.FOURTH_LEVEL_ID;
+          //                 }
+          //               }
+          //             }).toList();
+          //           });
+          //         },
+          //         items: _city.map((City map) {
+          //           return new DropdownMenuItem<String>(
+          //             value: map.FOURTH_LEVEL_NAME,
+          //             child: new Text(map.FOURTH_LEVEL_NAME,
+          //                 style: new TextStyle(
+          //                     color: Color(0xff000000), fontSize: 16)),
+          //           );
+          //         }).toList(),
+          //       ),
+          //     ),
+          //   ),
+          // ),
           const SizedBox(height: 15.0),
           // Align(
           //   alignment: Alignment.topLeft,
@@ -1460,12 +1460,12 @@ class _ChangePageState extends State<AddCustomers> {
                                         pEmailController.text,
                                     "customer_primaryphone":
                                         pPhoneController.text,
-                                    "customer_accountcontact":
-                                        aMobileController.text,
-                                    "customer_accountemail":
-                                        aEmailController.text,
-                                    "customer_accountphone":
-                                        aPhoneController.text,
+                                    // "customer_accountcontact":
+                                    //     aMobileController.text,
+                                    // "customer_accountemail":
+                                    //     aEmailController.text,
+                                    // "customer_accountphone":
+                                    //     aPhoneController.text,
                                     "customer_accounttype": "0",
                                   })
                                 : jsonEncode({
@@ -1492,12 +1492,12 @@ class _ChangePageState extends State<AddCustomers> {
                                         pEmailController.text,
                                     "customer_primaryphone":
                                         pPhoneController.text,
-                                    "customer_accountcontact":
-                                        aMobileController.text,
-                                    "customer_accountemail":
-                                        aEmailController.text,
-                                    "customer_accountphone":
-                                        aPhoneController.text,
+                                    // "customer_accountcontact":
+                                    //     aMobileController.text,
+                                    // "customer_accountemail":
+                                    //     aEmailController.text,
+                                    // "customer_accountphone":
+                                    //     aPhoneController.text,
                                     "customer_accounttype": "0",
                                   }),
                             headers: headers,

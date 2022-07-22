@@ -46,6 +46,8 @@ class _SplashScreenState extends State<SplashScreen> {
       'Accept': 'application/json',
       'Authorization': 'Bearer $STATIC_BARIER'
     });
+    print(URL + 'config');
+    print(response.body);
     if (jsonDecode(response.body)['status'] == 200) {
       SharedPreferences pref = await SharedPreferences.getInstance();
       pref.setString("config", jsonEncode(jsonDecode(response.body)));

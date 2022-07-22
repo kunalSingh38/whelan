@@ -2,7 +2,7 @@
     package="com.wrl.whelan">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="WHELAN"
+        android:label="Whelan Refining"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
          
